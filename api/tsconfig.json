@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ES2022",
+    "sourceMap": true,
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "allowUnreachableCode": false
+  },
+  "include": ["./src", "src/test"],
+  "exclude": ["node_modules"]
+}

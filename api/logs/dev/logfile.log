@@ -1,0 +1,16 @@
+{"level":"info","message":"","timestamp":"2023-02-08T21:45:27.149Z"}
+{"level":"info","message":"Node environment: dev","timestamp":"2023-02-08T21:45:27.157Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2023-02-08T21:45:27.157Z"}
+{"level":"info","message":"","timestamp":"2023-02-08T21:45:29.300Z"}
+{"level":"info","message":"Node environment: dev","timestamp":"2023-02-08T21:45:29.308Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2023-02-08T21:45:29.308Z"}
+{"level":"info","message":"mongodb://db/social-app","timestamp":"2023-02-08T21:47:07.658Z"}
+{"level":"info","message":"Node environment: dev","timestamp":"2023-02-08T21:47:07.681Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2023-02-08T21:47:07.681Z"}
+{"level":"info","message":"Connected to mongodb://db/social-app...","timestamp":"2023-02-08T21:47:07.703Z"}
+{"level":"info","message":"Node environment: dev","timestamp":"2023-02-08T21:48:57.119Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2023-02-08T21:48:57.119Z"}
+{"level":"info","message":"Connected to mongodb://db/social-app...","timestamp":"2023-02-08T21:48:57.141Z"}
+{"level":"info","message":"Node environment: dev","timestamp":"2023-02-08T21:49:00.553Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2023-02-08T21:49:00.557Z"}
+{"level":"info","message":"Connected to mongodb://db/social-app...","timestamp":"2023-02-08T21:49:00.589Z"}
