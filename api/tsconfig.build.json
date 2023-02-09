@@ -3,11 +3,11 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "target": "ES2022",
-    "sourceMap": true,
+    "sourceMap": false,
     "outDir": "dist",
     "esModuleInterop": true,
     "allowUnreachableCode": false
   },
   "include": ["./src"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "./src/test"]
 }

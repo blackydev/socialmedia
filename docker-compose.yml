@@ -4,11 +4,15 @@ services:
     build: ./api
     ports:
       - 4000:3000
-    environment:
-      app_db: mongodb://db/social-app
     volumes:
       - ./api/src:/app/src
       - ./api/logs/dev:/app/logs
+
+  api-tests:
+    image: my-social-app-api
+    volumes:
+      - ./api/logs/tests:/app/logs
+    command: npm test
 
   db:
     image: mongo:4.0.28-xenial

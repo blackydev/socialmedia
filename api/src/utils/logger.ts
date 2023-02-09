@@ -1,5 +1,4 @@
 import { createLogger, transports, format } from "winston";
-import config from "config";
 import "express-async-errors";
 
 const logger = createLogger({
@@ -26,7 +25,7 @@ const logger = createLogger({
     }),
     new transports.File({ filename: "./logs/exceptions.log" }),
   ],
-  exitOnError: config.get("throw_uncaught_exception"),
+  exitOnError: true,
 });
 
 export default logger;

@@ -1,1 +1,3 @@
-{}
+{
+  "db": "mongodb://db/social-app-tests"
+}

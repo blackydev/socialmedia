@@ -4,5 +4,8 @@ import config from "config";
 
 export default (): void => {
   const db: string = config.get("db");
-  mongoose.connect(db).then(() => logger.info(`Connected to ${db}...`));
+  mongoose
+    .set("strictQuery", true)
+    .connect(db)
+    .then(() => logger.info(`Connected to ${db}...`));
 };

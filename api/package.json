@@ -5,9 +5,9 @@
   "main": "dist/app.js",
   "type": "module",
   "scripts": {
-    "build": "tsc",
-    "test": "export NODE_ENV=test && jest --verbose --coverage --forceExit --watchAll --maxWorkers=1",
-    "dev": "nodemon --watch './**/*.ts' --exec 'node --experimental-specifier-resolution=node --loader ts-node/esm' src/app.ts",
+    "build": "tsc --project tsconfig.build.json",
+    "test": "jest --watchAll",
+    "dev": "nodemon",
     "start": "node dist/app.js"
   },
   "keywords": [],
@@ -15,8 +15,11 @@
   "license": "ISC",
   "devDependencies": {
     "@types/express": "^4.17.17",
+    "@types/jest": "^29.4.0",
     "@types/node": "^18.13.0",
+    "jest": "^29.4.2",
     "nodemon": "^2.0.20",
+    "ts-jest": "^29.0.5",
     "ts-node": "^10.9.1"
   },
   "dependencies": {
