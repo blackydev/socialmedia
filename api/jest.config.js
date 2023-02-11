@@ -6,4 +6,8 @@ export default {
   },
   testMatch: ["**/*.test.ts"],
   collectCoverage: true,
+  testTimeout: 2000,
+  verbose: true,
+  //  maxWorkers: 1,
+  detectOpenHandles: true,
 };

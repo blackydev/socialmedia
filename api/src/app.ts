@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 
 const server = app.listen(port, () => {
   logger.info(`Node environment: ${process.env.NODE_ENV}`);
-  logger.info(`Listening on port ${port}...`);
+  logger.info(`Listening on port ${port}`);
 });
-logger.info("app is working");
+
 export default server;

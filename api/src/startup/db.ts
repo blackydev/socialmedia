@@ -7,5 +7,5 @@ export default (): void => {
   mongoose
     .set("strictQuery", true)
     .connect(db)
-    .then(() => logger.info(`Connected to ${db}...`));
+    .then(() => logger.info(`Connected to ${db}`));
 };

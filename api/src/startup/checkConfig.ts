@@ -6,5 +6,6 @@ const check = (property: string) => {
 };
 
 export default () => {
-  check("db");
+  const values = ["db", "jwtPrivateKey"];
+  for (const val of values) check(val);
 };

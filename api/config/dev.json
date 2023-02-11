@@ -1,3 +1,4 @@
 {
-  "db": "mongodb://db/social-app"
+  "db": "mongodb://db/social-app",
+  "jwtPrivateKey": "PrivateKey123"
 }

@@ -1,0 +1,6 @@
+{"level":"info","message":"Node environment: dev","timestamp":"2023-02-11T22:50:43.425Z"}
+{"level":"info","message":"Listening on port 3000","timestamp":"2023-02-11T22:50:43.427Z"}
+{"level":"info","message":"Connected to mongodb://db/social-app","timestamp":"2023-02-11T22:50:43.455Z"}
+{"level":"info","message":"Node environment: dev","timestamp":"2023-02-11T22:51:28.735Z"}
+{"level":"info","message":"Listening on port 3000","timestamp":"2023-02-11T22:51:28.736Z"}
+{"level":"info","message":"Connected to mongodb://db/social-app","timestamp":"2023-02-11T22:51:28.751Z"}
