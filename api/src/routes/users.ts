@@ -71,4 +71,25 @@ router.patch(
   }
 );
 
+router.patch(
+  "/avatar",
+  auth,
+  async (req: Request, res: Response & AuthReponse) => {
+    const { password } = req.body as { password: string };
+
+    const user = await User.findById(res.locals.user._id);
+    if (!user)
+      return res
+        .status(400)
+        .send("User with the specified email address no longer exists.");
+
+    const error = await user.setPassword(password);
+    if (error) return res.status(400).send(error.message);
+
+    await user.save();
+
+    res.status(204).send();
+  }
+);
+
 export default router;

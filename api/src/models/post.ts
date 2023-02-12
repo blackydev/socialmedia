@@ -7,15 +7,44 @@ const PostSchema = new Schema<Post>({
     ref: "user",
     required: true,
   },
+
   content: {
     type: String,
     required: true,
   },
+
   media: [
     {
       type: Buffer,
     },
   ],
+
+  parent: {
+    type: Schema.Types.ObjectId,
+    ref: "post",
+  },
+
+  answers: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "post",
+    },
+  ],
+
+  likes: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "user",
+      required: true,
+    },
+  ],
+
+  likesCount: {
+    type: Number,
+    min: 0,
+    default: 0,
+  },
+
   createdAt: {
     type: Date,
     default: Date.now,
