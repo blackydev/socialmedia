@@ -7,13 +7,17 @@ import { User } from "../../models/user.js";
 const endpoint = "/api/auth/";
 
 describe("auth's route", () => {
-  beforeAll(async () => {
+  beforeEach(async () => {
     const user = new User({
       email: "auth@example.com",
       name: "user",
     });
-    await user.setPassword("Password123");
     await user.save();
+    await User.setPassword(user._id, "Password123");
+  });
+
+  afterEach(async () => {
+    await User.deleteMany({});
   });
 
   afterAll(async () => {
@@ -48,6 +52,12 @@ describe("auth's route", () => {
 
     it("should return 400 if invalid password is provided", async () => {
       auth.password = "";
+      const res = await exec();
+      expect(res.status).toBe(400);
+    });
+
+    it("should return 400 if incorrect password is provided", async () => {
+      auth.password = "WrongPassword123!";
       const res = await exec();
       expect(res.status).toBe(400);
     });

@@ -1,17 +1,30 @@
-import { Document } from "mongoose";
-import Post from "./post.js";
-
-interface User extends Document {
+import { Types, Document, Model } from "mongoose";
+import Permissions from "../utils/permisions.ts";
+export interface IUserDocument extends Document {
   email: string;
   password: string;
   name: string;
   avatar: Buffer;
-  posts: [Post];
+  permissions: Permissions;
+  followed: Types.ObjectId[];
+  followers: Types.ObjectId[];
+
+  followedCount: number;
+  followersCount: number;
 
   toJSON(): any;
-  setPassword(password: string): Promise<Error | undefined>;
   comparePassword(password: string): Promise<boolean & void>;
   generateAuthToken: () => string;
-}
 
-export default User;
+  addFollower(followerId: Types.ObjectId): boolean;
+  deleteFollower(followerId: Types.ObjectId): boolean;
+
+  follow(userId: Types.ObjectId): boolean;
+  unfollow(userId: Types.ObjectId): boolean;
+}
+export interface IUserModel extends Model<IUserDocument> {
+  setPassword(
+    userId: string | Types.ObjectId,
+    password: string,
+  ): Promise<IUserDocument | Error>;
+}
