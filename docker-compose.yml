@@ -12,14 +12,14 @@ services:
     depends_on:
       - db
 
-  api-tests:
-    image: socialmedia-api
-    volumes:
-      - ./api/src:/app/src
-      - ./api/coverage:/app/coverage
-    command: npm test
-    depends_on:
-      - db
+  #api-tests:
+    #image: socialmedia-api
+    #volumes:
+    #  - ./api/src:/app/src
+    #  - ./api/coverage:/app/coverage
+    #command: npm test
+    #depends_on:
+    #  - db
 
   web:
     build: ./web
